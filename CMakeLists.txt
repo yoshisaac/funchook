@@ -238,7 +238,8 @@ if (FUNCHOOK_BUILD_SHARED)
 endif ()
 
 if (FUNCHOOK_BUILD_STATIC)
-  add_funchook_library(funchook-static STATIC)
+   add_funchook_library(funchook-static STATIC)
+   target_compile_options(funchook-static PRIVATE -fPIC)
 endif ()
 
 #
